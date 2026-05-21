@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equb Savings Platform</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Equb</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#how">How It Works</a>
+            <a href="#dashboard">Dashboard</a>
+            <button class="btn-outline">Login</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Modern Community Savings Platform</h1>
+            <p>
+                Create savings groups, collect weekly contributions,
+                generate payout order once, and track every payment securely.
+            </p>
+            <button class="btn-primary" onclick="scrollToDashboard()">View Demo Dashboard</button>
+        </div>
+
+        <div class="hero-card">
+            <h3>Sample Group</h3>
+            <p class="small-text">Weekly Contribution</p>
+            <h2>$100.00</h2>
+
+            <div class="status-row">
+                <span>Members</span>
+                <strong>4</strong>
+            </div>
+            <div class="status-row">
+                <span>Next Payout</span>
+                <strong>Person B</strong>
+            </div>
+            <div class="status-row">
+                <span>Status</span>
+                <strong class="green">Active</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <h2>Core Features</h2>
+        <div class="grid">
+            <div class="feature-card">
+                <h3>Create Groups</h3>
+                <p>Group admins can create savings groups with members, amount, and schedule.</p>
+            </div>
+            <div class="feature-card">
+                <h3>One-Time Random Order</h3>
+                <p>The app generates the payout order once at the beginning and locks it.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Payment Tracking</h3>
+                <p>Track weekly contributions, missed payments, completed payouts, and fees.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Stripe Ready</h3>
+                <p>Designed to connect later with Stripe Connect for payments and payouts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how" class="section light">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div>1. User registers</div>
+            <div>2. Creates or joins group</div>
+            <div>3. App randomizes payout order once</div>
+            <div>4. Members pay weekly</div>
+            <div>5. Scheduled member receives payout</div>
+        </div>
+    </section>
+
+    <section id="dashboard" class="section">
+        <h2>Demo Group Dashboard</h2>
+
+        <div class="dashboard">
+            <div class="panel">
+                <h3>Create Sample Group</h3>
+
+                <label>Group Name</label>
+                <input id="groupName" type="text" value="Family Equb Group" />
+
+                <label>Weekly Amount</label>
+                <input id="weeklyAmount" type="number" value="100" />
+
+                <label>Members</label>
+                <textarea id="members" rows="5">Person A
+Person B
+Person C
+Person D</textarea>
+
+                <button class="btn-primary full" onclick="createGroup()">Generate Payout Order</button>
+            </div>
+
+            <div class="panel">
+                <h3>Generated Schedule</h3>
+                <div id="groupResult" class="result-box">
+                    Click “Generate Payout Order” to create the sample schedule.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Equb Savings Platform © 2026</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
